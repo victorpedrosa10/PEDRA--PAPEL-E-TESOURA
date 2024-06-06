@@ -10,16 +10,19 @@
     <div class="container">
         <h1>Pedra, Papel ou Tesoura</h1>
             <div class="buttons">
-                <button id="rock">&#x270A;</button>
-                <button id="paper">&#x1F590;</button>
-                <button id="scissors">&#x270C;</button>
+                <button id="rock" onclick="playhuman('rock')">&#x270A;</button>
+                <button id="paper" onclick="playhuman('paper')">&#x1F590;</button>
+                <button id="scissors" onclick="playhuman('scissors')">&#x270C;</button>
             </div>
 
+           
             <p class="result"></p>
-            <p class="your-score">Sua Pontuação: <span>0</span></p>
-            <p class="machine-score">Pontuação da Alexa: <span>0</span></p>
+            <p class="your-score">Sua Pontuação: <span id="human-score">0</span></p>
+            <p class="machine-score">Pontuação da Alexa: <span id="machine-score">0</span></p>
 
     </div>
+
+    <script src="./scripts.js"></script>
     
 </body>
 </html>
