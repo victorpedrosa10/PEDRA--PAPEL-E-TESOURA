@@ -1,7 +1,8 @@
  const result = document.querySelector(".result")
-
  const humanscore = document.querySelector("#human-score")
  const machinescore = document.querySelector("#machine-score")
+
+ const alexarockresult = document.querySelector("#alexarock")
 
  let humanscorenumber = 0
  let machinescorenumber = 0
@@ -10,6 +11,7 @@
  const playhuman = (humanchoice) => {
    
    playthegame(humanchoice, playmachine())
+
     
  }
 
@@ -17,11 +19,11 @@
     const choices = ['rock', 'paper', 'scissors']
     const randomnumer = Math.floor(Math.random() * 3)
 
+
     return choices[randomnumer]
-
+      
     
- }
-
+ } 
 
 
  const playthegame = (human, machine) => {
@@ -30,7 +32,8 @@
  
    if(human === machine){
       result.innerHTML = "Deu empate!"
-   }  else if ((human === 'paper' && machine === 'rock') || 
+     
+      }  else if ((human === 'paper' && machine === 'rock') || 
                ( human === 'rock' && machine === 'scissors') || 
                ( human === 'scissors' && machine === 'paper')) {
                   humanscorenumber++
@@ -41,5 +44,5 @@
       machinescore.innerHTML = machinescorenumber
       result.innerHTML = "Você perdeu para a Alexa"
    }
-
+     
 }
